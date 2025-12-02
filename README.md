@@ -1,4 +1,4 @@
-# Certbot Cloudflare DNS Docker Container with webhook support
+# Certbot Cloudflare DNS Docker Container with deploy hook support
 
 Этот контейнер используется для генерации и автоматического обновления SSL-сертификатов Let's Encrypt с помощью плагина Cloudflare DNS. Он основан на официальном образе [Certbot](https://hub.docker.com/r/certbot/dns-cloudflare) с некоторыми изменениями и дополнениями, делающими его более гибким и настраиваемым. Поддерживает deploy hook после обновления сертификата.
 
