@@ -28,7 +28,7 @@
 | `CERTBOT_DOMAINS`      | Список доменов, разделенных запятыми, для которых необходимо получить сертификат  | - |
 | `CERTBOT_EMAIL`        | Адрес электронной почты для уведомлений Let's Encrypt                       | - |
 | `CERTBOT_KEY_TYPE`     | Тип закрытого ключа для генерации (ecdsa  или  rsa)                                     | `ecdsa` |
-| `CERTBOT_SERVER`       | URL-адрес сервера ACME                                                 | `https://acme-v02.api.letsencrypt.org/directory` |
+| `CERTBOT_SERVER`       | URL-адрес сервера ACME Staging: `https://acme-staging-v02.api.letsencrypt.org/directory` Production: `https://acme-v02.api.letsencrypt.org/directory`   | `https://acme-v02.api.letsencrypt.org/directory` |
 | `CLOUDFLARE_API_TOKEN` | Токен API Cloudflare для аутентификации DNS (см. ниже, как его создать)                          | - |
 | `CLOUDFLARE_CREDENTIALS_FILE` | Путь к файлу учетных данных Cloudflare. | `/cloudflare.ini` |
 | `CLOUDFLARE_PROPAGATION_SECONDS` | Время ожидания (в секундах) после настройки TXT-записей DNS перед проверкой. Полезно, если обновление DNS происходит медленно.  | `10` |
