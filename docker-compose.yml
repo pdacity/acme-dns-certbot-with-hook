@@ -12,10 +12,10 @@ services:
       CLOUDFLARE_PROPAGATION_SECONDS: "${CLOUDFLARE_PROPAGATION_SECONDS}"
       RENEWAL_INTERVAL: "${RENEWAL_INTERVAL}"
       REPLACE_SYMLINKS: "${REPLACE_SYMLINKS}"
-      PUID: "${PUID}"
-      PGID: "${PGID}"
+#      PUID: "${PUID}"
+#      PGID: "${PGID}"
       DEBUG: "${DEBUG}"
-      DEPLOY_HOOK: "cp /etc/letsencrypt/live /etc/certs || exit 1"
+      DEPLOY_HOOK: "${DEPLOY_HOOK}"
     restart: always
     cpu_shares: 100
     mem_limit: 64m      
