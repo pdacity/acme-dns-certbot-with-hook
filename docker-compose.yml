@@ -1,0 +1,22 @@
+services:
+  certbot:
+    image: pdacity/acme-dns-certbot-with-hook:latest
+    volumes:
+      - $PWD/data:/etc/letsencrypt
+    environment:
+      CERTBOT_DOMAINS: "${CERTBOT_DOMAINS}"
+      CERTBOT_EMAIL: "${CERTBOT_EMAIL}"
+      CERTBOT_KEY_TYPE: "${CERTBOT_KEY_TYPE}"
+      CERTBOT_SERVER: "${CERTBOT_SERVER}"
+      CLOUDFLARE_API_TOKEN: "${CLOUDFLARE_API_TOKEN}"
+      CLOUDFLARE_PROPAGATION_SECONDS: "${CLOUDFLARE_PROPAGATION_SECONDS}"
+      RENEWAL_INTERVAL: "${RENEWAL_INTERVAL}"
+      REPLACE_SYMLINKS: "${REPLACE_SYMLINKS}"
+      PUID: "${PUID}"
+      PGID: "${PGID}"
+      DEBUG: "${DEBUG}"
+      DEPLOY_HOOK: "cp /etc/letsencrypt/live /etc/certs || exit 1"
+    restart: always
+    cpu_shares: 100
+    mem_limit: 64m      
+
